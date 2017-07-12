@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0, width=device-width"/>
+    <title>api</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <!--<link rel="stylesheet" type="text/css" href="../css/life.css" />-->
+    <link rel="stylesheet" type="text/css" href="../css/modifyNick.css" />
+</head>
+<body>
+    <div id="wrap">
+    	<div id="currentAddress">
+    		<h2 class="fun">当前地址</h2>
+    		<select id="addressSelect" onchange="changeRomId()"></select>
+    	</div>
+    	<br><br>
+    	<div id="addAddress">
+    		<h2 class="fun">增加地址</h2>
+    		<!--<select id="province" onchange="changeProvince()"></select>省
+    		<select id="city" onchange="changeCity()"></select>市（县）
+    		<select id="district" onchange="changeDistrict()"></select>区(镇)<br>-->
+    		小区名称:<select id="neighbourhood" onchange="changeNeighbourhood(this)"></select><br>
+    		门牌号:<input type="text" id="romName" placeholder="" onfocus="edit(this)" onblur="cancel(this)" class="txt" value="" />
+    		<a class="btn" tapmode="active" onclick="doAddAddress()">确认</a>
+    	</div>
+    	<br><br>
+        <div id="main">
+            <h2 class="fun">新增数据</h2>
+            <table border="1">
+            	<tr>
+            		<th>月份</th><th>水</th><th>电</th><th>煤</th>
+            	</tr>
+            	<tr>
+            		<td>
+            			<select id="month"></select>
+                		<i class="del" tapmode="" onclick="delWord(this)"></i>
+                	</td>
+            		<td>
+            			<input type="text" id="shui" placeholder="吨" onfocus="edit(this)" onblur="cancel(this)" class="txt" value="" />
+                		<i class="del" tapmode="" onclick="delWord(this)"></i>
+                	</td>
+                	<td>
+            			<input type="text" id="dian" placeholder="度" onfocus="edit(this)" onblur="cancel(this)" class="txt" value="" />
+                		<i class="del" tapmode="" onclick="delWord(this)"></i>
+                	</td>
+                	<td>
+            			<input type="text" id="mei" placeholder="立方米" onfocus="edit(this)" onblur="cancel(this)" class="txt" value="" />
+                		<i class="del" tapmode="" onclick="delWord(this)"></i>
+                	</td>
+            	</tr>
+            </table>
+            <br>
+            <a class="btn" tapmode="active" onclick="doAddNewData()">提交数据</a>
+        </div>
+        <br><br>
+        <div id="history-data">
+        	<h2 class="fun">历史数据</h2>
+            	<div id="homedata">
+            		<script id="homedata-template" type="text/x-dot-template">
+            			<table border="1">
+            				<tr>
+            					<th>月份</th><th>水</th><th>电</th><th>煤</th>
+            				</tr>
+            				{{ for(var i=0; i < it.length; i++) { }}
+            				<tr>
+            	    			<td>{{=it[i].month}}</td>
+            	    			<td>{{=it[i].shui}}</td>
+            	    			<td>{{=it[i].dian}}</td>
+            	    			<td>{{=it[i].mei}}</td>
+            				</tr>
+							{{ } }}
+						 </table>
+					</script>
+					<div id="homedata-content"></div>
+				</div>       
+         </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script src='../script/swipe.js'></script>
+<script type="text/javascript" src="../script/doT.min.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/life.js"></script>
+</html>

@@ -1,0 +1,46 @@
+#main{
+    padding-top: 0px; font-size: 14px; color: #4c4c4c;
+}
+#main .info, #main .more{
+    margin-bottom: 20px; background-color: #fff;
+}
+#main ul li{
+    padding: 0px 10px; border-bottom: 1px solid #d9d9d9;
+}
+#main ul li a{
+    padding: 10px 10px 10px 0; 
+    overflow: hidden; padding-left: 24px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 18px;
+    background-size: 18px;
+}
+#main li.device a{
+    background-image: url(../image/led.png);
+}
+#main ul li button{
+    position: relative; float: right;
+    overflow: visible; display: inline-block; 
+    padding: 0.3em 1em; 
+    border: 1px solid #d4d4d4; 
+    margin: 0; margin-top: 7px;
+    text-decoration: none; 
+    text-shadow: 1px 1px 0 #fff; 
+    font:11px/normal sans-serif; 
+    color: #333; 
+    white-space: nowrap; 
+    cursor: pointer; 
+    outline: none; 
+    background-color: #ececec; 
+    -webkit-border-radius: 0.2em; 
+    -moz-border-radius: 0.2em; 
+    border-radius: 0.2em; 
+}
+#main ul li button.control{
+}
+#main ul li button.settings{
+	margin-right: 10px;
+}
+#main .info li:last-child a, #main .more li:last-child a{
+    border-bottom: none;
+}

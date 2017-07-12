@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="address=no" />
+		<link rel="stylesheet" href="../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/chatSiri.css" />
+			<script type="text/javascript" src="../script/Vue.js"></script>
+		<script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
+	
+		<script type="text/javascript" src="../script/siriwave.js"></script>
+		<title></title>
+	</head>
+
+	<body  style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;" >
+
+
+		<div id="wrap">
+				<div id="app">
+			<div id="header">
+				<a class="back-icon" tapmode="" onclick="api.closeWin()"></a>
+				<h1>语音客服</h1>
+				<div class="stopBtn" style="color: white;" v-on:click="stopRead">停止朗读</div>
+			</div>
+			
+		
+			<ul id="chatContainer" style="font-size: 0;" >
+			   <template v-for="(mess,index) in history">
+				<li class="mymessageContainer" v-if="mess.type == 1">
+					<!--<textarea  class="editContainer" class="editContainer"></textarea>-->
+					<div class="mymessage"  tabindex="0" v-html="mess.message"><!--{{mess.message}}--></div>
+				    <div class="editmessageContainer" ><div class="editmessage">轻点以编辑</div></div> 
+				</li>
+				<li class="youmessageContainer"  v-if="mess.type == 2">
+					<div class="youmessage" v-html="mess.message"><!--{{mess.message}}--></div>
+				</li>
+			</template>
+			<li style="height:100%;box-sizing: border-box;"></li>
+				
+			</ul>
+
+</div><!--app-->
+
+
+
+			<div class="bottom">
+				<img id="voiceBtn" src="../image/microphone.png" />
+				<div class="wavecontainer">
+					<div id="container-ios9-canvas"></div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+	<script>
+
+		
+		var SW9 = new SiriWave({
+			speed: 0.1,
+			amplitude: 1,
+			container: document.getElementById('container-ios9-canvas'),
+			autostart: false,
+			style: 'ios9'
+		});
+		
+	
+		
+		$("#container-ios9-canvas").hide();
+
+
+
+
+
+
+	</script>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/iot.js"></script>
+	<script type="text/javascript" src="../script/chatSiri.js"></script>
+
+</html>

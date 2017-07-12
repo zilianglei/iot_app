@@ -1,0 +1,59 @@
+	.mctldiv{
+    	text-align: center;
+    }
+    div.choose{
+    	text-align:center;
+    	padding-top:20px;
+    	height:30px;
+    }
+    img.ctlimg{
+    	display:inline-block;
+    	text-align: right;
+    	margin-right:10px;
+    	margin-left:20px;
+    	height:30px;
+    }
+    .mybtnfirst{
+    margin-top:20px;
+    background: #87B1D1;
+    border:solid 1px #BFBFBF;
+    height:30px;
+    width:60px;
+    }
+    .mybtn{
+    margin:20px 20px;
+    background: #87B1D1;
+    border:solid 1px #BFBFBF;
+    height:30px;
+    width:60px;
+    }
+    .mybtnlast{
+    margin-top:20px;
+    background: #87B1D1;
+    border:solid 1px #BFBFBF;
+    height:30px;
+    width:60px;
+    }
+    .mytextarea{
+    overflow:auto;
+    background: #F2F2F2;
+    border: solid 1px #BFBFBF;
+    }
+    .mresultdiv{
+    margin:20px auto;
+    text-align:center;
+    }
+    hr {
+    border: dashed 1px #BFBFBF;
+    width:100%;
+    }
+    .tbl_devlist{
+    margin:auto;
+    width:97%;
+    border:solid 1px #ccc;
+    }
+	th,tr,td{
+	border:solid 1px #ccc;
+	}
+	
+

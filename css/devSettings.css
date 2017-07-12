@@ -1,0 +1,73 @@
+#main{
+    padding-top: 0px; font-size: 14px; color: #4c4c4c;
+}
+#main .info, #main .more{
+    margin-bottom: 20px; background-color: #fff;
+}
+#main ul li{
+    padding: 0px 0px;/* background: url(../image/arr-r.png) no-repeat 97% center;*/
+    -webkit-background-size: 10px 14px;
+    background-size: 10px 14px;
+}
+/* for settings type: text */
+#main ul li.s-text{
+    padding: 0px 10px 0px 0px; background: url(../image/arr-r.png) no-repeat 97% center;
+    -webkit-background-size: 10px 14px;
+    background-size: 10px 14px;
+}
+#main ul li a{
+    display: block; padding: 10px 0; border-bottom: 1px solid #d9d9d9;
+    overflow: hidden; padding-left: 4px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 18px;
+    background-size: 18px;
+}
+#main li.nickname a{
+    background-image: url(../image/user.png);
+}
+#main li.gender a{
+    background-image: url(../image/gender.png);
+}
+#main li.modify a{
+    background-image: url(../image/password.png);
+}
+#main li.clear a{
+    background-image: url(../image/clear.png);
+}
+#main li.update a{
+    background-image: url(../image/update.png);
+}
+#main li.about a{
+    background-image: url(../image/user.png);
+}
+
+#main ul li a em{
+    color: #55abce; float: right; margin-right: 10px;
+}
+#main li.update em{
+    color: #ccc;
+}
+#main .info li:last-child a, #main .more li:last-child a{
+    border-bottom: none;
+}
+
+#main ul li button{
+    position: relative; float: center;
+    overflow: visible; display: inline-block; 
+    padding: 0.3em 1em; 
+    border: 1px solid #d4d4d4; 
+    margin-top: 7px; margin-bottom: 7px;
+    margin-left: 10px;
+    text-decoration: none; 
+    text-shadow: 1px 1px 0 #fff; 
+    font:11px/normal sans-serif; 
+    color: #333; 
+    white-space: nowrap; 
+    cursor: pointer; 
+    outline: none; 
+    background-color: #ececec; 
+    -webkit-border-radius: 0.2em; 
+    -moz-border-radius: 0.2em; 
+    border-radius: 0.2em; 
+}

@@ -1,0 +1,143 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+li{
+	list-style: none;
+}
+
+.emptyBtn{
+	color: lightseagreen;
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	line-height: 45px;
+	font-size: 16px;
+}
+
+#chatContainer{
+	/*border: 1px solid red;*/
+
+	font-size: 0;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    bottom: 40px;
+    overflow: auto;
+    background: white;
+	
+	
+}
+
+#chatContainer li{
+	/*border: 1px solid blue;*/
+
+	position: relative;
+	padding-top: 12px;
+}
+
+
+
+#chatContainer .time{
+	/*border: 1px solid red;*/
+	
+	text-align: center;
+	color: lightgray;
+	margin: 0 0 12px 0;
+	font-size: 12px;
+}
+
+
+
+#chatContainer .headerImgContainer{
+	/*border: 1px solid greenyellow;*/
+	
+	display: inline-block;
+	vertical-align: top;
+	width: 15%;
+	text-align: center;
+	
+}
+
+#chatContainer .headerImgContainer .headerImg{
+	width: 44px;
+	border-radius: 22px;
+}
+#chatContainer .headerImgContainer .name{
+	font-size: 16px;
+	color: black;
+}
+#chatContainer .messageContainer {
+	/*border: 1px solid red;*/
+	
+	display: inline-block;
+	vertical-align: top;
+	width: 70%;
+
+}
+#chatContainer .message{
+	/*border: 1px solid red;*/
+	
+	display: inline-block;
+	vertical-align: top;
+	max-width: 70%;
+	text-align: justify;
+	font-size: 12px;
+	background: lightskyblue;
+	border-radius: 5px;
+	padding: 8px;
+
+}
+#chatContainer .messageContainer .message{
+	float: right;
+	max-width: 100%;
+}
+
+#chatContainer .rigth-Margin{
+	/*border: 1px solid greenyellow;*/
+	
+	display: inline-block;
+	vertical-align: top;
+	width: 15%;
+}
+
+
+/*聊天框*/
+#chat-feature{
+	
+	height: 40px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: gainsboro;
+}
+
+#chat-feature .messageInput{
+	width: 75%;
+	height: 30px;
+	background: white;
+	border: none;
+	position: absolute;
+	top: 5px;
+	left: 20px;
+	
+}
+
+#chat-feature .sendBtn{
+	background: lightseagreen;
+	width: 15%;
+	height: 30px;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	
+}
